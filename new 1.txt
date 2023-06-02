@@ -1,0 +1,83 @@
+New VPS
+IP: 45.14.224.153, 2a0d:2787:1b:23a::a
+Port: 22
+User: root
+Password: EtP949X6Fi3djKxn3C
+
+
+
+
+http://45.14.224.153:31268/vUTkbpjSk0ydQSnxFlmikffKb/7f82ae46-905e-42ce-a8e0-13e62a41950a/admin/
+
+http://45.14.224.153/vUTkbpjSk0ydQSnxFlmikffKb/7f82ae46-905e-42ce-a8e0-13e62a41950a/admin/
+
+https://45.14.224.153.sslip.io/vUTkbpjSk0ydQSnxFlmikffKb/7f82ae46-905e-42ce-a8e0-13e62a41950a/admin/
+
+http://45.14.224.153/vUTkbpjSk0ydQSnxFlmikffKb/7f82ae46-905e-42ce-a8e0-13e62a41950a/admin/quick-setup/
+   https://45.14.224.153.sslip.io/vUTkbpjSk0ydQSnxFlmikffKb/7f82ae46-905e-42ce-a8e0-13e62a41950a/admin/quick-setup/
+
+
+45.14.224.153.sslip.io
+
+
+https://s1.ar4s2.ir/vUTkbpjSk0ydQSnxFlmikffKb/dns/dns-query
+
+
+
+==============================================================================================================================================================================
+Norway VM2 IR
+
+Main IP: 23.132.185.252
+Root pass: EtP949X6Fi3djKxn3C
+
+IP address allocation:
+2a0f:9400:700f:a7ee:0000:0000:0000:0001
+
+ServerName: N1.ar4s2.ir
+
+WHM Access
+http://xxxxx:2086
+Username: root
+Password: Vhan1n4z!
+
+Custom DNS Server Addresses
+=============================
+The custom DNS addresses you should set for your domain to use are:
+Primary DNS: host1681644223
+Secondary DNS: host1681644223
+
+
+ System information as of Fri 21 Apr 2023 10:57:00 AM CEST
+
+  System load:           0.0
+  Usage of /:            27.6% of 19.41GB
+  Memory usage:          35%
+  Swap usage:            2%
+  Processes:             130
+  Users logged in:       0
+  IPv4 address for eth0: 23.132.185.252
+  IPv6 address for eth0: 2a0f:9400:700f:a7ee::1
+  IPv4 address for wgcf: 172.16.0.2
+  IPv6 address for wgcf: 2606:4700:110:88cb:65b8:1042:b12b:2aee
+
+
+
+==============================================================================================================================================================================
+RackNerd control panel.
+
+Username : vmuser114971
+IP Address : 37.63.174.35
+Hostname : 37.63.174.35
+
+
+768 MB KVM VPS
+
+IP Address: 104.168.117.222
+Extra IP Address:
+Username: root
+
+Root Password: 5XoAZghl05hHn3B0Y1
+
+SSH Port 22
+
+

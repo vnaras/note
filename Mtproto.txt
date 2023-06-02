@@ -1,0 +1,206 @@
+sudo -i
+apt update && apt upgrade -y
+
+
+apt-get update -y && apt-get upgrade -y
+
+
+
+https://github.com/seriyps/mtproto_proxy
+https://sites.google.com/view/learnfromarta/%D9%81%D8%A7%DB%8C%D9%84-%D9%87%D8%A7%DB%8C-%D8%A2%D9%85%D9%88%D8%B2%D8%B4-%D8%B3%D8%A7%D8%AE%D8%AA-vpn-%D9%88-%D9%BE%D8%B1%D9%88%DA%A9%D8%B3%DB%8C?authuser=2
+http://seriyps.ru/mtpgen.html
+
+
+apt-get install certbot -y
+certbot certonly --standalone --agree-tos --register-unsafely-without-email -d un1.fun4.cloud
+certbot renew --dry-run
+
+curl -L -o mtp_install.sh https://git.io/fj5ru && bash mtp_install.sh -p 1586 -s 21afdeaea51b399ce48c5f5b54e34bbc -t d6ec0e5ce222c045172e50f74d0704ac -a dd -a tls -d telewebion.com
+
+curl -L -o mtp_install.sh https://git.io/fj5ru && bash mtp_install.sh
+
+
+systemctl enable mtproto-proxy
+
+
+START:
+systemctl start mtproto-proxy
+
+STATUS:
+systemctl status mtproto-proxy
+
+STOP:
+systemctl stop mtproto-proxy
+
+
+Connections:
+/opt/mtp_proxy/bin/mtp_proxy eval 'lists:sum([proplists:get_value(all_connections, L) || {_, L} <- ranch:info()]).'
+
+
+
+systemctl daemon-reload
+INFO: Starting
+Created symlink /etc/systemd/system/multi-user.target.wants/mtproto-proxy.service → /etc/systemd/system/mtproto-proxy.service.
+INFO: Detecting IP address
+INFO: Detected external IP is 104.168.117.222
+INFO: Logs: /var/log/mtproto-proxy/application.log
+INFO: Secret: 21afdeaea51b399ce48c5f5b54e34bbc
+INFO: Proxy links:
+Normal:          https://t.me/proxy?server=104.168.117.222&port=1586&secret=21afdeaea51b399ce48c5f5b54e34bbc
+Secure:          https://t.me/proxy?server=104.168.117.222&port=1586&secret=dd21afdeaea51b399ce48c5f5b54e34bbc
+Fake-TLS hex:    https://t.me/proxy?server=104.168.117.222&port=1586&secret=ee21afdeaea51b399ce48c5f5b54e34bbc74656c65776562696f6e2e636f6d
+Fake-TLS base64: https://t.me/proxy?server=104.168.117.222&port=1586&secret=7iGv3q6lGzmc5IxfW1TjS7x0ZWxld2ViaW9uLmNvbQ==
+
+INFO: Proxy is ready
+
+
+apt-get install certbot -y
+certbot certonly --standalone --agree-tos --register-unsafely-without-email -d un2.fun4.cloud
+certbot renew --dry-run
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/un2.fun4.cloud/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/un2.fun4.cloud/privkey.pem
+   Your cert will expire on 2023-07-21. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+ - Your account credentials have been saved in your Certbot
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Certbot so
+   making regular backups of this folder is ideal.
+
+curl -L -o mtp_install.sh https://git.io/fj5ru && bash mtp_install.sh -p 1586 -s 10e6f41faa517352cce9428fb7dbb4ab -t ae1d22ac83c3e8a6947c8a9c0d3b4f34 -a dd -a tls -d telewebion.com
+
+
+
+INFO: Detecting IP address
+INFO: Detected external IP is 23.132.185.252
+INFO: Logs: /var/log/mtproto-proxy/application.log
+INFO: Secret: 10e6f41faa517352cce9428fb7dbb4ab
+INFO: Proxy links:
+Normal:          https://t.me/proxy?server=23.132.185.252&port=1586&secret=10e6f41faa517352cce9428fb7dbb4ab
+Secure:          https://t.me/proxy?server=23.132.185.252&port=1586&secret=dd10e6f41faa517352cce9428fb7dbb4ab
+Fake-TLS hex:    https://t.me/proxy?server=23.132.185.252&port=1586&secret=ee10e6f41faa517352cce9428fb7dbb4ab74656c65776562696f6e2e636f6d
+Fake-TLS base64: https://t.me/proxy?server=23.132.185.252&port=1586&secret=7hDm9B-qUXNSzOlCj7fbtKt0ZWxld2ViaW9uLmNvbQ==
+
+INFO: Proxy is ready
+
+
+
+
+
+
+Success!
+Your proxy has been successfully registered. You can now pass this proxy tag to the software you are using: 22b5c1e39db550be272b9deeb56b2f03.
+Here is a link to your proxy server: https://t.me/proxy?server=104.168.117.222&port=2053&secret=a95f007a02e727cbdd47d178e90228c7
+And here is a direct link for those who have the Telegram app installed: tg://proxy?server=104.168.117.222&port=2053&secret=a95f007a02e727cbdd47d178e90228c7
+
+
+
+INFO: Proxy links:
+Normal:          https://t.me/proxy?server=104.168.117.222&port=2053&secret=a95f007a02e727cbdd47d178e90228c7
+Secure:          https://t.me/proxy?server=104.168.117.222&port=2053&secret=dda95f007a02e727cbdd47d178e90228c7
+Fake-TLS hex:    https://t.me/proxy?server=104.168.117.222&port=2053&secret=eea95f007a02e727cbdd47d178e90228c773332e616d617a6f6e6177732e636f6d
+Fake-TLS base64: https://t.me/proxy?server=104.168.117.222&port=2053&secret=7qlfAHoC5yfL3UfReOkCKMdzMy5hbWF6b25hd3MuY29t
+
+
+
+
+
+
+apt-get install certbot -y
+certbot certonly --standalone --agree-tos --register-unsafely-without-email -d trmtproto.ceyptopunk.fun
+certbot renew --dry-run
+
+curl -L -o mtp_install.sh https://git.io/fj5ru && bash mtp_install.sh -p 1583 -s 51b0e3d9b399fc0cb956fa0c13d67ac6 -t f6b55b565f4a30fd338149877479b605 -a dd -a tls -d leader.ir
+
+curl -L -o mtp_install.sh https://git.io/fj5ru && bash mtp_install.sh
+
+
+systemctl daemon-reload
+INFO: Starting
+Created symlink /etc/systemd/system/multi-user.target.wants/mtproto-proxy.service → /etc/systemd/system/mtproto-proxy.service.
+INFO: Detecting IP address
+INFO: Detected external IP is 212.193.13.79
+INFO: Logs: /var/log/mtproto-proxy/application.log
+INFO: Secret: 51b0e3d9b399fc0cb956fa0c13d67ac6
+INFO: Proxy links:
+Normal:          https://t.me/proxy?server=212.193.13.79&port=1583&secret=51b0e3d9b399fc0cb956fa0c13d67ac6
+Secure:          https://t.me/proxy?server=212.193.13.79&port=1583&secret=dd51b0e3d9b399fc0cb956fa0c13d67ac6
+Fake-TLS hex:    https://t.me/proxy?server=212.193.13.79&port=1583&secret=ee51b0e3d9b399fc0cb956fa0c13d67ac66c65616465722e6972
+Fake-TLS base64: https://t.me/proxy?server=212.193.13.79&port=1583&secret=7lGw49mzmfwMuVb6DBPWesZsZWFkZXIuaXI=
+
+INFO: Proxy is ready
+
+
+
+
+itunes.apple.com:443
+
+bash <(curl -sL https://bit.ly/realityez) -m
+
+bash <(curl -sL https://bit.ly/realityez) -t grpc -d itunes.apple.com -s -w --port 253 --warp-license Dc7e19Q2-75rTa3b9-ML6t80R9
+
+
+
+vless://8f0ab3d5-ece3-4805-b896-5765142edb54@212.193.13.79:253?security=reality&encryption=none&alpn=h2,http/1.1&pbk=uampOWxwNvU12_dIOEcAQJBxl9vuGaFNWOAA9aeMAUk&headerType=none&fp=chrome&type=grpc&flow=&sni=itunes.apple.com&sid=fe021a7f7bd092f9&mode=gun&serviceName=grpc#RealityEZPZ
+
+
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/sbox-reality/main/reality.sh && bash reality.sh
+
+
+Below is the share link of Sing-box Reality and saved to /root/sing-box/share-link.txt
+Clash Meta configuration file saved to /root/sing-box/clash-meta.yaml
+vless://ae87655f-0ec0-47ad-99af-5322b7c6c81e@212.193.13.79:883?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.microsoft.com&fp=chrome&pbk=vIEjBdrGJ11wDn_cMbNMaoWe1K-5jG8BijShDZ86kUQ&sid=c26045f6b1907e22&type=tcp&headerType=none#Misaka-Reality
+
+
+
+wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+
+
+========================== 生成key ==========================
+ 
+
+ privateKey:wGTBnKUit4oWe2cRQTDwYT4OHFR6abvd94kEN4Wa3GI 
+
+ publicKey:hDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0 
+ ---> Xray关闭成功 
+ ---> Xray启动成功 
+
+
+进度 8/13 : 账号 
+============================= VLESS reality_vision  ==============================
+ 
+
+ ---> 账号:069e7150-vless_reality_vision 
+
+ ---> 通用格式(VLESS+reality+uTLS+Vision) 
+    vless://069e7150-d044-498e-9b3d-e142a46304af@212.193.13.79:444?encryption=none&security=reality&type=tcp&sni=www.google-analytics.com&fp=chrome&pbk=hDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0&flow=xtls-rprx-vision#069e7150-vless_reality_vision
+ 
+ ---> 格式化明文(VLESS+reality+uTLS+Vision) 
+协议类型:VLESS reality，地址:212.193.13.79，publicKey:hDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0，serverNames：www.google-analytics.com，端口:444，用户ID:069e7150-d044-498e-9b3d-e142a46304af，传输方式:tcp，账户名:069e7150-vless_reality_vision
+ 
+ ---> 二维码 VLESS(VLESS+reality+uTLS+Vision) 
+    https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless%3A%2F%2F069e7150-d044-498e-9b3d-e142a46304af%40212.193.13.79%3A444%3Fencryption%3Dnone%26security%3Dreality%26type%3Dtcp%26sni%3Dwww.google-analytics.com%26fp%3Dchrome%26pbk%3DhDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0%26flow%3Dxtls-rprx-vision%23069e7150-vless_reality_vision
+ 
+============================== VLESS reality_gRPC  ===============================
+ 
+
+ ---> 账号:069e7150-vless_reality_grpc 
+
+ ---> 通用格式(VLESS+reality+uTLS+gRPC) 
+    vless://069e7150-d044-498e-9b3d-e142a46304af@212.193.13.79:444?encryption=none&security=reality&type=grpc&sni=www.google-analytics.com&fp=chrome&pbk=hDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0&path=grpc&serviceName=grpc#069e7150-vless_reality_grpc
+ 
+ ---> 格式化明文(VLESS+reality+uTLS+gRPC) 
+协议类型:VLESS reality，serviceName:grpc，地址:212.193.13.79，publicKey:hDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0，serverNames：www.google-analytics.com，端口:444，用户ID:069e7150-d044-498e-9b3d-e142a46304af，传输方式:gRPC，client-fingerprint：chrome，账户名:069e7150-vless_reality_grpc
+ 
+ ---> 二维码 VLESS(VLESS+reality+uTLS+gRPC) 
+    https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless%3A%2F%2F069e7150-d044-498e-9b3d-e142a46304af%40212.193.13.79%3A444%3Fencryption%3Dnone%26security%3Dreality%26type%3Dgrpc%26sni%3Dwww.google-analytics.com%26fp%3Dchrome%26pbk%3DhDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0%26path%3Dgrpc%26serviceName%3Dgrpc%23069e7150-vless_reality_grpc
+	
+	
+	

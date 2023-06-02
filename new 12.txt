@@ -1,0 +1,39 @@
+===========================================================
+کلید توسعه کلودفلر
+_M69pPXCD3W2pJMbnA0g9WX1asCYVa1wBbGZ9cBg
+لطفاً دستورالعمل را دنبال کنید و کلید توسعه کلودفلر را جای‌گذاری کنید
+curl -X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+     -H "Authorization: Bearer _M69pPXCD3W2pJMbnA0g9WX1asCYVa1wBbGZ9cBg" \
+     -H "Content-Type:application/json"
+
+   
+   
+  
+   apt-get install certbot -y
+certbot certonly --standalone --agree-tos --register-unsafely-without-email -d un1.fun4.cloud
+certbot renew --dry-run
+   
+ IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/un1.fun4.cloud/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/un1.fun4.cloud/privkey.pem
+   Your cert will expire on 2023-07-21. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"  
+   
+   ===========================================================
+   Copy this token to access the Cloudflare API. For security this will not be shown again. learn more
+Test this token
+fX73cOKVsI8nqd8tFYVl90P_bChSQSzC2g20lKLj
+To confirm your token is working correctly, copy and paste the below CURL command in a terminal shell to test.
+curl -X GET "https://api.cloudflare.com/client/v4/user/tokens/verify" \
+     -H "Authorization: Bearer fX73cOKVsI8nqd8tFYVl90P_bChSQSzC2g20lKLj" \
+     -H "Content-Type:application/json"
+   
+   
+   
+      apt-get install certbot -y
+certbot certonly --standalone --agree-tos --register-unsafely-without-email -d un1.fun4.cloud
+certbot renew --dry-run

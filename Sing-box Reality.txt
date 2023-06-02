@@ -1,0 +1,133 @@
+
+
+
+
+itunes.apple.com:443
+
+bash <(curl -sL https://bit.ly/realityez) -m
+
+bash <(curl -sL https://bit.ly/realityez) -t grpc -d itunes.apple.com -s -w --port 886 --warp-license Dc7e19Q2-75rTa3b9-ML6t80R9
+
+
+
+vless://8f0ab3d5-ece3-4805-b896-5765142edb54@212.193.13.79:253?security=reality&encryption=none&alpn=h2,http/1.1&pbk=uampOWxwNvU12_dIOEcAQJBxl9vuGaFNWOAA9aeMAUk&headerType=none&fp=chrome&type=grpc&flow=&sni=itunes.apple.com&sid=fe021a7f7bd092f9&mode=gun&serviceName=grpc#RealityEZPZ
+
+vless://25906e5b-0559-475e-aef1-1a32524ec7f2@104.168.117.222:886?security=reality&encryption=none&alpn=h2,http/1.1&pbk=bKkqY5osAvvXAf9EHnqk8uwfhvQgcee6-8fngCEiKyQ&headerType=none&fp=chrome&type=grpc&flow=&sni=itunes.apple.com&sid=7f25441a6de34bcf&mode=gun&serviceName=grpc#RealityEZPZ
+
+vless://b51a60a9-72d2-4703-9147-e2d1e719770d@104.168.117.222:886?security=reality&encryption=none&alpn=h2,http/1.1&pbk=bKkqY5osAvvXAf9EHnqk8uwfhvQgcee6-8fngCEiKyQ&headerType=none&fp=chrome&type=grpc&flow=&sni=itunes.apple.com&sid=7f25441a6de34bcf&mode=gun&serviceName=grpc#vihan
+
+vless://b51a60a9-72d2-4703-9147-e2d1e719770d@104.168.117.222:886?security=reality&encryption=none&alpn=h2,http/1.1&pbk=bKkqY5osAvvXAf9EHnqk8uwfhvQgcee6-8fngCEiKyQ&headerType=none&fp=chrome&type=h2&flow=&sni=itunes.apple.com&sid=7f25441a6de34bcf#vihan
+
+vless://d95b36e0-a5dc-4575-86bb-b6b76f63a893@23.132.185.252:886?security=reality&encryption=none&alpn=h2,http/1.1&pbk=_tfbzC8ycFIxVcBi_t6QfyNB51l4gEdvxsZPxtO9Y24&headerType=none&fp=chrome&type=grpc&flow=&sni=itunes.apple.com&sid=2f56ea6c221b6a65&mode=gun&serviceName=grpc#RealityEZPZ
+
+vless://9b4af454-88f1-4420-9fa5-6d4bb32c5ebf@23.132.185.252:886?security=reality&encryption=none&alpn=h2,http/1.1&pbk=_tfbzC8ycFIxVcBi_t6QfyNB51l4gEdvxsZPxtO9Y24&headerType=none&fp=chrome&type=grpc&flow=&sni=itunes.apple.com&sid=2f56ea6c221b6a65&mode=gun&serviceName=grpc#new
+
+
+
+wget -N --no-check-certificate https://raw.githubusercontent.com/Misaka-blog/sbox-reality/main/reality.sh && bash reality.sh
+
+
+Below is the share link of Sing-box Reality and saved to /root/sing-box/share-link.txt
+Clash Meta configuration file saved to /root/sing-box/clash-meta.yaml
+vless://ae87655f-0ec0-47ad-99af-5322b7c6c81e@212.193.13.79:883?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.microsoft.com&fp=chrome&pbk=vIEjBdrGJ11wDn_cMbNMaoWe1K-5jG8BijShDZ86kUQ&sid=c26045f6b1907e22&type=tcp&headerType=none#Misaka-Reality
+
+vless://cc732718-11ea-4d73-80b7-501cd015d642@104.168.117.222:1043?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.microsoft.com&fp=chrome&pbk=iR1866a9Tmp8F8Dis_pBLIYOzbwh4ipMVImIduwfPU8&sid=3da0e138ee162794&type=tcp&headerType=none#Misaka-Reality
+
+vless://a63a138e-123a-4745-9d36-7dfbec3204f7@23.132.185.252:1043?encryption=none&flow=xtls-rprx-vision&security=reality&sni=www.microsoft.com&fp=chrome&pbk=TIke-6bBEIe9cngIAWtceUlm5WQ2qUTdQLDYbrKzK2I&sid=c64b34f69c2967a9&type=tcp&headerType=none#Misaka-Reality
+
+
+
+
+wget -P /root -N --no-check-certificate "https://raw.githubusercontent.com/mack-a/v2ray-agent/master/install.sh" && chmod 700 /root/install.sh && /root/install.sh
+
+
+========================== 生成key ==========================
+ 
+
+ privateKey:wGTBnKUit4oWe2cRQTDwYT4OHFR6abvd94kEN4Wa3GI 
+
+ publicKey:hDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0 
+ ---> Xray关闭成功 
+ ---> Xray启动成功 
+
+
+进度 8/13 : 账号 
+============================= VLESS reality_vision  ==============================
+ 
+
+ ---> 账号:069e7150-vless_reality_vision 
+
+ ---> 通用格式(VLESS+reality+uTLS+Vision) 
+    vless://069e7150-d044-498e-9b3d-e142a46304af@212.193.13.79:444?encryption=none&security=reality&type=tcp&sni=www.google-analytics.com&fp=chrome&pbk=hDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0&flow=xtls-rprx-vision#069e7150-vless_reality_vision
+ 
+ ---> 格式化明文(VLESS+reality+uTLS+Vision) 
+协议类型:VLESS reality，地址:212.193.13.79，publicKey:hDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0，serverNames：www.google-analytics.com，端口:444，用户ID:069e7150-d044-498e-9b3d-e142a46304af，传输方式:tcp，账户名:069e7150-vless_reality_vision
+ 
+ ---> 二维码 VLESS(VLESS+reality+uTLS+Vision) 
+    https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless%3A%2F%2F069e7150-d044-498e-9b3d-e142a46304af%40212.193.13.79%3A444%3Fencryption%3Dnone%26security%3Dreality%26type%3Dtcp%26sni%3Dwww.google-analytics.com%26fp%3Dchrome%26pbk%3DhDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0%26flow%3Dxtls-rprx-vision%23069e7150-vless_reality_vision
+ 
+============================== VLESS reality_gRPC  ===============================
+ 
+
+ ---> 账号:069e7150-vless_reality_grpc 
+
+ ---> 通用格式(VLESS+reality+uTLS+gRPC) 
+    vless://069e7150-d044-498e-9b3d-e142a46304af@212.193.13.79:444?encryption=none&security=reality&type=grpc&sni=www.google-analytics.com&fp=chrome&pbk=hDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0&path=grpc&serviceName=grpc#069e7150-vless_reality_grpc
+ 
+ ---> 格式化明文(VLESS+reality+uTLS+gRPC) 
+协议类型:VLESS reality，serviceName:grpc，地址:212.193.13.79，publicKey:hDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0，serverNames：www.google-analytics.com，端口:444，用户ID:069e7150-d044-498e-9b3d-e142a46304af，传输方式:gRPC，client-fingerprint：chrome，账户名:069e7150-vless_reality_grpc
+ 
+ ---> 二维码 VLESS(VLESS+reality+uTLS+gRPC) 
+    https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless%3A%2F%2F069e7150-d044-498e-9b3d-e142a46304af%40212.193.13.79%3A444%3Fencryption%3Dnone%26security%3Dreality%26type%3Dgrpc%26sni%3Dwww.google-analytics.com%26fp%3Dchrome%26pbk%3DhDz1nlGU4NQjtJInaji5dEd4XuYvLnreu4HRGtIVIF0%26path%3Dgrpc%26serviceName%3Dgrpc%23069e7150-vless_reality_grpc
+	
+	
+	
+	
+	
+	========================== 生成key ==========================
+ 
+
+ privateKey:uPGUlDWETq5-FZmBmN1OTK_eUdO-WwHj3td6d5cMOGk 
+
+ publicKey:b9ajOwL6Fmh_YI1dpxE_yDF9mroDmO4d4etDg9wfYl0 
+ ---> Xray关闭成功 
+ ---> Xray启动成功 
+
+
+进度 8/13 : 账号 
+============================= VLESS reality_vision  ==============================
+ 
+
+ ---> 账号:e88af2d0-vless_reality_vision 
+
+ ---> 通用格式(VLESS+reality+uTLS+Vision) 
+    vless://e88af2d0-b150-4bd3-b80c-2077bff994c3@104.168.117.222:1443?encryption=none&security=reality&type=tcp&sni=d1.awsstatic.com&fp=chrome&pbk=b9ajOwL6Fmh_YI1dpxE_yDF9mroDmO4d4etDg9wfYl0&flow=xtls-rprx-vision#e88af2d0-vless_reality_vision
+ 
+ ---> 格式化明文(VLESS+reality+uTLS+Vision) 
+协议类型:VLESS reality，地址:104.168.117.222，publicKey:b9ajOwL6Fmh_YI1dpxE_yDF9mroDmO4d4etDg9wfYl0，serverNames：d1.awsstatic.com，端口:1443，用户ID:e88af2d0-b150-4bd3-b80c-2077bff994c3，传输方式:tcp，账户名:e88af2d0-vless_reality_vision
+ 
+ ---> 二维码 VLESS(VLESS+reality+uTLS+Vision) 
+    https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless%3A%2F%2Fe88af2d0-b150-4bd3-b80c-2077bff994c3%40104.168.117.222%3A1443%3Fencryption%3Dnone%26security%3Dreality%26type%3Dtcp%26sni%3Dd1.awsstatic.com%26fp%3Dchrome%26pbk%3Db9ajOwL6Fmh_YI1dpxE_yDF9mroDmO4d4etDg9wfYl0%26flow%3Dxtls-rprx-vision%23e88af2d0-vless_reality_vision
+ 
+============================== VLESS reality_gRPC  ===============================
+ 
+
+ ---> 账号:e88af2d0-vless_reality_grpc 
+
+ ---> 通用格式(VLESS+reality+uTLS+gRPC) 
+    vless://e88af2d0-b150-4bd3-b80c-2077bff994c3@104.168.117.222:1443?encryption=none&security=reality&type=grpc&sni=d1.awsstatic.com&fp=chrome&pbk=b9ajOwL6Fmh_YI1dpxE_yDF9mroDmO4d4etDg9wfYl0&path=grpc&serviceName=grpc#e88af2d0-vless_reality_grpc
+ 
+ ---> 格式化明文(VLESS+reality+uTLS+gRPC) 
+协议类型:VLESS reality，serviceName:grpc，地址:104.168.117.222，publicKey:b9ajOwL6Fmh_YI1dpxE_yDF9mroDmO4d4etDg9wfYl0，serverNames：d1.awsstatic.com，端口:1443，用户ID:e88af2d0-b150-4bd3-b80c-2077bff994c3，传输方式:gRPC，client-fingerprint：chrome，账户名:e88af2d0-vless_reality_grpc
+ 
+ ---> 二维码 VLESS(VLESS+reality+uTLS+gRPC) 
+    https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=vless%3A%2F%2Fe88af2d0-b150-4bd3-b80c-2077bff994c3%40104.168.117.222%3A1443%3Fencryption%3Dnone%26security%3Dreality%26type%3Dgrpc%26sni%3Dd1.awsstatic.com%26fp%3Dchrome%26pbk%3Db9ajOwL6Fmh_YI1dpxE_yDF9mroDmO4d4etDg9wfYl0%26path%3Dgrpc%26serviceName%3Dgrpc%23e88af2d0-vless_reality_grpc
+	
+	
+	
+	
+ bash -c "$(curl -L https://raw.githubusercontent.com/vnaras/xray-reality/master/install.sh)"
+	
+	
+
+vless://b94fdeeb-0944-45e9-b34e-620f8d59e402@104.168.117.222:3443?type=http&security=reality&encryption=none&pbk=DYXLXb9SZkHHclu1wCJ-q9aLtm40v260cdS7mHB96kc&fp=chrome&path=%2F&sni=goo.gl&sid=476cd8ee947d8cb5#vless+tls+h2+reality

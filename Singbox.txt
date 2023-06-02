@@ -1,0 +1,96 @@
+
+UUID
+f56677b7-9fb0-4262-8dcf-0b02ed596465
+
+generate reality-keypair
+PrivateKey: eB4WxMaH4nfNojoluZMnyh5O-p5c1OLWGUjivQHnX2w
+PublicKey: FoEuujdpW6djJb7l3lZREOsWmwnXXQcWLZI8oonrzA4
+
+rand -hex 8
+eda8726489d9c689
+
+
+
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      { 
+        "tag": "local",
+        "address": "https://1.1.1.1/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      { 
+        "geosite": "cn",
+        "server": "local"
+      },
+      {
+        "geosite": "category-ads-all",
+        "server": "block",
+        "disable_cache": true
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "vless",
+      "tag": "vless-in",
+      "listen": "::",
+      "listen_port": 4443,
+      "users": [
+        {
+          "uuid": "f56677b7-9fb0-4262-8dcf-0b02ed596465",
+          "flow": "xtls-rprx-vision"
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.googletagmanager.com",
+        "reality": {
+          "enabled": true,
+          "handshake": {
+            "server": "www.googletagmanager.com",
+            "server_port": 4443
+          },
+          "private_key": "eB4WxMaH4nfNojoluZMnyh5O-p5c1OLWGUjivQHnX2w",
+          "short_id": [
+            "eda8726489d9c689"
+          ]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "geosite": "cn",
+        "geoip": "cn",
+        "outbound": "direct"
+      },
+      {
+        "geosite": "category-ads-all",
+        "outbound": "block"
+      }
+    ]
+  }
+}
+

@@ -1,0 +1,119 @@
+
+address: 212.193.13.79:8684
+server: 212.193.13.79
+username: vihan
+userpasswd: Vhan1n4z!
+port: 8684 
+
+
+tkpanel.fun4.cloud
+
+apt-get install certbot -y
+certbot certonly --standalone --agree-tos --register-unsafely-without-email -d tkpanel.fun4.cloud
+
+
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/tkpanel.fun4.cloud/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/tkpanel.fun4.cloud/privkey.pem
+   Your cert will expire on 2023-08-31. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+ - Your account credentials have been saved in your Certbot
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Certbot so
+   making regular backups of this folder is ideal.
+ - If you like Certbot, please consider supporting our work by:
+
+   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+   Donating to EFF:                    https://eff.org/donate-le
+   
+   
+   
+   
+   {
+  "country"      : "United States",
+  "countryCode"  : "US",
+  "city"         : "Washington",
+  "isp"          : "Cloudflare, Inc.",
+  "org"          : "Cloudflare WARP",
+  "as"           : "AS13335 Cloudflare, Inc.",
+  "query"        : "104.28.196.81"
+}
+clash-server                   inactive                       
+shadowtls                      active                         
+ss-faketls                     inactive                       
+ss-v2ray                       inactive                       
+hiddify-warp                   active                         
+hiddify-haproxy                active                         
+hiddify-panel                  active                         
+hiddify-nginx                  active                         
+hiddify-singbox                active                         
+hiddify-xray                   active                         
+===========================================================
+                                                                               ▓▓▓
+                                                                             ▓▓▓▓▓
+                                                                        ▓▓▓       
+                                                                      ▓▓▓▓▓  ▓▓▓▓▓
+                                                                 ▓▓▓  ▓▓▓▓▓  ▓▓▓▓▓
+                                                              ▓▓▓▓▓▓  ▓▓▓▓▓  ▓▓▓▓▓
+                                                              ▓▓▓▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓▓
+                                                              ▓▓▓▓▓▓  ▓▓▓▓▓  ▓▓▓▓▓
+
+Finished! Thank you for helping to skip filternet.
+Please open the following link in the browser for client setup
+
+Permanent Admin link: 
+   http://212.193.13.79/Jqd1vmjXJcSAV5SHy1m/f0566205-211a-4d0d-9109-6518cb43fd0c/admin/ 
+
+Secure Admin links: 
+
+   https://212.193.13.79.sslip.io/Jqd1vmjXJcSAV5SHy1m/f0566205-211a-4d0d-9109-6518cb43fd0c/admin/
+
+---------------------Finished!------------------------
+
+
+
+clash-server                   inactive                       
+shadowtls                      active                         
+ss-faketls                     active                         
+ss-v2ray                       active                         
+hiddify-warp                   active                         
+hiddify-haproxy                active                         
+hiddify-panel                  active                         
+hiddify-nginx                  active                         
+hiddify-singbox                active                         
+hiddify-xray                   active                         
+===========================================================
+                                                                               ▓▓▓
+                                                                             ▓▓▓▓▓
+                                                                        ▓▓▓       
+                                                                      ▓▓▓▓▓  ▓▓▓▓▓
+                                                                 ▓▓▓  ▓▓▓▓▓  ▓▓▓▓▓
+                                                              ▓▓▓▓▓▓  ▓▓▓▓▓  ▓▓▓▓▓
+                                                              ▓▓▓▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓▓
+                                                              ▓▓▓▓▓▓  ▓▓▓▓▓  ▓▓▓▓▓
+
+Finished! Thank you for helping to skip filternet.
+Please open the following link in the browser for client setup
+
+Permanent Admin link: 
+   http://212.193.13.79/SKeHmSeqMfoMudRk5rFrNJq/4b009822-5475-4a8d-a1b4-f8c6d10187b1/admin/ 
+
+Secure Admin links: 
+
+   https://turkey.fun4.cloud/SKeHmSeqMfoMudRk5rFrNJq/4b009822-5475-4a8d-a1b4-f8c6d10187b1/admin/
+
+   https://arvan.ar4s2.ir/SKeHmSeqMfoMudRk5rFrNJq/4b009822-5475-4a8d-a1b4-f8c6d10187b1/admin/
+
+   https://turkey.ceyptopunk.fun/SKeHmSeqMfoMudRk5rFrNJq/4b009822-5475-4a8d-a1b4-f8c6d10187b1/admin/
+
+   https://treality.ceyptopunk.fun/SKeHmSeqMfoMudRk5rFrNJq/4b009822-5475-4a8d-a1b4-f8c6d10187b1/admin/
+
+   https://212.193.13.79.sslip.io/SKeHmSeqMfoMudRk5rFrNJq/4b009822-5475-4a8d-a1b4-f8c6d10187b1/admin/
+
+---------------------Finished!------------------------

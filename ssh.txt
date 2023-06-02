@@ -1,0 +1,94 @@
+apt-get update -y && apt-get upgrade -y
+
+:افزودن یوزر جدید
+
+adduser username --shell=/bin/false
+
+:حذف یوزر
+
+deluser
+
+تغییر پسورد یوزر:
+
+passwd username pass
+
+مشاهده لیست یوزر:
+
+cat /etc/passwd
+
+
+irancell port : 2255
+Mci port : 443
+
+
+===================================================================================================
+
+دستور تغییر دسترسی به روت :
+
+sudo -i 
+
+دستور باز کردن فایل تنظیمات ssh
+
+nano /etc/ssh/sshd_config
+
+
+دستور آزاد کردن پورت در فایروال
+
+ufw allow YOURPORT
+
+
+ریستارت کردن سرور : 
+
+reboot
+
+===================================================================================================
+
+
+
+
+1- 
+sudo apt update -y && apt upgrade -y
+
+2- 
+apt install screen
+
+3- 
+apt install lsof
+
+4- 
+sudo wget -O /usr/bin/badvpn-udpgw https://raw.githubusercontent.com/daybreakersx/premscript/master/badvpn-udpgw64
+
+5-
+sudo chmod +x /usr/bin/badvpn-udpgw
+
+6-
+sudo touch /etc/rc.local
+
+7-
+sudo nano /etc/rc.local
+=============================================================
+
+#!/bin/sh -e
+screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7555
+exit 0
+
+8-
+chmod +x /etc/rc.local
+
+9-
+reboot
+
+10-
+sudo lsof -i -P -n | grep LISTEN
+
+
+
+
+
+XPanel Link : https://usssh.ceyptopunk.fun:2201/login
+Username : vihan 
+Password : Vhan1n4z! 
+Port : 2053 
+
+
+104.168.117.222:2200/reinstall

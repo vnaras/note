@@ -1,0 +1,28 @@
+104.168.117.222
+
+root
+5XoAZghl05hHn3B0Y1
+
+
+
+
+
+curl -L -o mtp_install.sh https://git.io/fj5ru && bash mtp_install.sh -p 2040 -s b575caf0663a31b87352e34faa7784aa -t 7b1bd83e6b5a4fddba3b52fa2125097a -a dd -a tls -d discord.com
+
+Normal:          https://t.me/proxy?server=104.168.117.222&port=2040&secret=b575caf0663a31b87352e34faa7784aa
+Secure:          https://t.me/proxy?server=104.168.117.222&port=2040&secret=ddb575caf0663a31b87352e34faa7784aa
+Fake-TLS hex:    https://t.me/proxy?server=104.168.117.222&port=2040&secret=eeb575caf0663a31b87352e34faa7784aa646973636f72642e636f6d
+Fake-TLS base64: https://t.me/proxy?server=104.168.117.222&port=2040&secret=7rV1yvBmOjG4c1LjT6p3hKpkaXNjb3JkLmNvbQ==
+
+
+IPv4:           104.168.117.222
+Port:			2053
+Username:       vihan
+Password:       Vhan1n4z!
+
+
+
+
+curl -L -o mtp_install.sh https://git.io/fj5ru && bash mtp_install.sh -p 1090 -s a0835ff60ae58b1298c3e1c022fc2088 -t bb42f97ab32f8c257f8e4e02189af0e2 -a dd -a tls -d discord.com
+
+a0835ff60ae58b1298c3e1c022fc2088

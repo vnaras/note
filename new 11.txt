@@ -1,0 +1,82 @@
+{
+  "log": {
+    "level": "info",
+    "timestamp": true
+  },
+  "dns": {
+    "servers": [
+      { 
+        "tag": "local",
+        "address": "https://1.1.1.1/dns-query",
+        "detour": "direct"
+      },
+      {
+        "tag": "block",
+        "address": "rcode://success"
+      }
+    ],
+    "rules": [
+      { 
+        "geosite": "cn",
+        "server": "local"
+      },
+      {
+        "geosite": "category-ads-all",
+        "server": "block",
+        "disable_cache": true
+      }
+    ]
+  },
+  "inbounds": [
+    {
+      "type": "vless",
+      "tag": "vless-in",
+      "listen": "::",
+      "listen_port": 443,
+      "users": [
+        {
+          "uuid": "aabfc069-8972-4f5f-9019-14104ca6b3da",
+          "flow": "xtls-rprx-vision"
+        }
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.google-analytics.com",
+        "reality": {
+          "enabled": true,
+          "handshake": {
+            "server": "www.google-analytics.com",
+            "server_port": 443
+          },
+          "private_key": "MPR2Z7LY6F56vmn3YCGq5Iz8Y_XIWiQLkRTzn46pl0E",
+          "short_id": [
+            "4eaaab9d558d6929"
+          ]
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "geosite": "cn",
+        "geoip": "cn",
+        "outbound": "direct"
+      },
+      {
+        "geosite": "category-ads-all",
+        "outbound": "block"
+      }
+    ]
+  }
+}

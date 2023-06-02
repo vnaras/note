@@ -1,0 +1,129 @@
+apt-get update -y && apt-get upgrade -y
+
+
+apt-get -y install ocserv
+
+
+add-apt-repository -y ppa:certbot/certbot
+
+
+apt-get -y update
+
+
+apt-get -y install certbot
+
+certbot certonly --manual --preferred-challenges dns -d op.fun4.cloud
+
+certbot certonly --manual --preferred-challenges dns -d ov.ceyptopunk.fun
+
+
+nano /etc/ocserv/ocserv.conf
+EDIT:
+auth = "plain[/etc/ocserv/ocpasswd]"
+
+server-cert = /etc/letsencrypt/live/op.fun4.cloud/fullchain.pem
+server-key = /etc/letsencrypt/live/op.fun4.cloud/privkey.pem
+
+server-cert = /etc/letsencrypt/live/ov.ceyptopunk.fun/fullchain.pem
+server-key = /etc/letsencrypt/live/ov.ceyptopunk.fun/privkey.pem
+
+try-mtu-discovery = true
+
+ipv4-network = 10.12.0.0
+
+tunnel-all-dns = true
+
+#route = 192.168.1.0/255.255.255.0
+#route = 192.168.5.0/255.255.255.0
+#route = fd91:6d87:7341:db6a::/64
+#no-route = 192.168.5.0/255.255.255.0
+
+
+apt-get -y install iptables-persistent
+
+
+ip addr
+
+
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+
+dpkg-reconfigure iptables-persistent
+
+
+systemctl restart ocserv
+
+
+nano /etc/sysctl.conf
+Uncomment: #net.ipv4.ip_forward=1
+
+
+sysctl -p
+
+
+ADD USER:
+ocpasswd -c /etc/ocserv/ocpasswd vihan
+
+
+Locking USER:
+ocpasswd -c /etc/ocserv/ocpasswd -l username
+
+
+Unlocking USER:
+ocpasswd -c /etc/ocserv/ocpasswd -u username
+
+
+Deleting USER:
+ocpasswd -c /etc/ocserv/ocpasswd -d username
+
+
+
+
+===================================================================================================
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/op.fun4.cloud/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/op.fun4.cloud/privkey.pem
+   Your cert will expire on 2023-07-19. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+
+
+
+===================================================================================================
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/ov.ceyptopunk.fun/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/ov.ceyptopunk.fun/privkey.pem
+   Your cert will expire on 2023-07-19. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+ - Your account credentials have been saved in your Certbot
+   configuration directory at /etc/letsencrypt. You should make a
+   secure backup of this folder now. This configuration directory will
+   also contain certificates and private keys obtained by Certbot so
+   making regular backups of this folder is ideal.
+   
+===================================================================================================
+   OpenConnect
+   https://ov.ceyptopunk.fun:443
+   
+   vihan
+   Vhan1n4z
+===================================================================================================
+   OpenConnect
+   https://op.fun4.cloud:1198
+   vihan
+   Vhan1n4z
+   
+   
+   
+   
+   
+   
+

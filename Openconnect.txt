@@ -1,0 +1,206 @@
+sudo apt update
+sudo apt install ocserv
+
+systemctl status ocserv
+
+If it’s not running, then you can start it with:
+
+sudo systemctl start ocserv
+
+y default OpenConnect VPN server listens on TCP and UDP port 443. 
+If it’s being used by web server, then the VPN server would probably fail to start. 
+i will see how to change the port in OpenConnect VPN configuration file later.
+
+sudo ufw allow 80,443/tcp
+
+======================Statndalone============================
+sudo apt install certbot
+certbot --version
+
+sudo certbot certonly --standalone --preferred-challenges http --agree-tos --email you@example.com -d vpn.example.com
+
+    certonly: Obtain a certificate but don’t install it.
+    --standalone: Use the standalone plugin to obtain a certificate
+    --preferred-challenges http: Perform http-01 challenge to validate our domain, which will use port 80.
+    --agree-tos: Agree to Let’s Encrypt terms of service.
+    --email: Email address is used for account registration and recovery.
+    -d: Specify your domain name.
+==========================Webroot============================
+nano /etc/apache2/sites-available/vpn.example.com.conf
+
+<VirtualHost *:80>        
+        ServerName vpn.example.com
+
+        DocumentRoot /var/www/ocserv
+</VirtualHost>
+
+
+sudo mkdir /var/www/ocserv
+
+sudo chown www-data:www-data /var/www/ocserv -R
+
+sudo a2ensite vpn.example.com
+sudo systemctl reload apache2
+
+
+sudo certbot certonly --webroot --agree-tos --email you@exmaple.com -d vpn.example.com -w /var/www/ocserv
+
+=====================================================
+sudo nano /etc/ocserv/ocserv.conf
+
+-allows you to use Ubuntu system accounts to login from VPN clients. 
+This behavior can be disabled by commenting out the following line.
+auth = "pam[gid-min=1000]"
+
+
+-allows you to add username with encoded passwords by "ocpasswd"
+usernames and passwords saved in /etc/ocserv/ocpasswd 
+auth = "plain[passwd=/etc/ocserv/ocpasswd]"
+
+
+-Next, find the following two lines.
+Comment out the UDP port. (We will use TCP BBR algorithm to boost TCP speed.)
+tcp-port = 443
+udp-port = 443
+
+
+-find the following two lines. We need to change them.
+server-cert = /etc/ssl/certs/ssl-cert-snakeoil.pem
+server-key = /etc/ssl/private/ssl-cert-snakeoil.key
+
+
+-Replace the default setting with the path of Let’s Encrypt server certificate and server key file.
+server-cert = /etc/letsencrypt/live/vpn.example.com/fullchain.pem
+server-key = /etc/letsencrypt/live/vpn.example.com/privkey.pem
+
+
+-Then, set the maximal number of clients. Default is 128. Set to zero for unlimited.
+max-clients = 128
+
+-Set the number of devices a user is able to log in from at the same time.
+Default is 2. Set to zero for unlimited or 1 
+max-same-clients = 2
+
+-By default, keepalive packets are sent every 300 seconds (5 minutes). 
+I prefer to use a short time (30 seconds) to reduce the chance of VPN connection dropout.
+keepalive = 30
+
+-Next, find the following line. 
+Change false to true to enable MTU discovery, which can optimize VPN performance.
+try-mtu-discovery = false
+
+-You can set the time that a client is allowed to stay idle before being disconnected via the following two parameters. 
+If you prefer the client to stay connected indefinitely, then comment out these two parameters.
+idle-timeout=1200
+mobile-idle-timeout=1800
+
+-After that, set the default domain to vpn.example.com.
+default-domain = example.com
+
+-The IPv4 network configuration is as follows by default. 
+This will cause problems because many home routers also set the IPv4 network range to 192.168.1.0/24.
+ipv4-network = 192.168.1.0     --- > 10.10.10.0
+ipv4-netmask = 255.255.255.0
+
+
+-Find the following two lines and uncomment them, so VPN clients will be given private IPv6 addresses.
+ipv6-network = fda9:4efe:7e3b:03ea::/48
+ipv6-subnet-prefix = 64
+
+-If you see the following line
+ipv6-network = fda9:4efe:7e3b:03ea::/64
+
+Please change it to:
+ipv6-network = fda9:4efe:7e3b:03ea::/48
+
+
+-Now uncomment the following line to tunnel all DNS queries via the VPN.
+tunnel-all-dns = true
+
+-The default DNS resolver addresses are as follows, which is fine.
+dns = 8.8.8.8
+dns = 1.1.1.1
+
+-Then comment out all the route parameters (add # symbol at the beginning of the following lines), 
+which will set the server as the default gateway for the clients.
+
+#route = 10.0.0.0/8
+#route = 172.16.0.0/12
+#route = 192.168.0.0/16
+#route = fd00::/8
+#route = default
+
+#no-route = 192.168.5.0/255.255.255.0
+
+
+Save and close the file  Then restart the VPN server for the changes to take effect.
+
+===============================================================
+ocpasswd -c /etc/ocserv/ocpasswd username
+
+====================================================================
+In order for the VPN server to route packets between VPN clients and the Internet, 
+we need to enable IP forwarding by running the following command.
+
+echo "net.ipv4.ip_forward = 1" | sudo tee /etc/sysctl.d/60-custom.conf
+
+Also, run the following two commands to enable TCP BBR algorithm to boost TCP speed.
+
+echo "net.core.default_qdisc=fq" | sudo tee -a /etc/sysctl.d/60-custom.conf
+echo "net.ipv4.tcp_congestion_control=bbr" | sudo tee -a /etc/sysctl.d/60-custom.conf
+
+
+Then apply the changes with the below command. 
+The -p option will load sysctl settings from /etc/sysctl.d/60-custom.conf file. 
+This command will preserve our changes across system reboots.
+
+sudo sysctl -p /etc/sysctl.d/60-custom.conf
+
+
+===========================================================
+sudo apt install ufw
+sudo ufw allow 22/tcp
+
+ip addr
+find network interface name
+
+
+It will link your virtual private network with the Internet. 
+
+sudo nano /etc/ufw/before.rules
+
+# NAT table rules
+*nat
+:POSTROUTING ACCEPT [0:0]
+-A POSTROUTING -s 10.10.10.0/24 -o eth0 -j MASQUERADE
+
+# End each table with the 'COMMIT' line or these rules won't be processed
+COMMIT
+
+After This find "ufw-before-forward" chain in this file 
+and add the following 3 lines, 
+which will accept packet forwarding if the source IP or destination IP is in the 10.10.10.0/24 range.
+
+# allow forwarding for trusted network
+-A ufw-before-forward -s 10.10.10.0/24 -j ACCEPT
+-A ufw-before-forward -d 10.10.10.0/24 -j ACCEPT
+
+
+and then save
+========================================================
+sudo ufw enable
+sudo systemctl restart ufw
+
+sudo iptables -t nat -L POSTROUTING
+
+
+sudo ufw allow 443/tcp
+or
+sudo ufw allow 443/udp
+
+
+
+
+
+
+https://github.com/openconnect/openconnect-gui/releases

@@ -1,0 +1,67 @@
+
+
+uspanel.fun4.cloud
+external IP is 104.168.117.222
+username: vihan
+userpasswd: Vhan1n4z!
+port: 8684
+
+apt-get install certbot -y
+certbot certonly --standalone --agree-tos --register-unsafely-without-email -d uspanel.fun4.cloud
+certbot renew --dry-run
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/uspanel.fun4.cloud/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/uspanel.fun4.cloud/privkey.pem
+   Your cert will expire on 2023-08-31. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+
+   
+   
+-----BEGIN CERTIFICATE-----
+MIIEXjCCA0agAwIBAgISBLk81EFfvaQuEs1Ni1AGLFiIMA0GCSqGSIb3DQEBCwUA
+MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
+EwJSMzAeFw0yMzA1MjAwMzAxMTVaFw0yMzA4MTgwMzAxMTRaMB0xGzAZBgNVBAMT
+EnVzcGFuZWwuZnVuNC5jbG91ZDBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABM06
+bfk5AdXH0nzb8vAPkbymY9Cf+T45LnPgvkChdBr8hT+8JYrvDJVCPwM6hzmsPAQZ
+OW3I+T/4sZrUhw24fF2jggJMMIICSDAOBgNVHQ8BAf8EBAMCB4AwHQYDVR0lBBYw
+FAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFFhv
+p634LvzH0v5UgmZuxktWk7VRMB8GA1UdIwQYMBaAFBQusxe3WFbLrlAJQOYfr52L
+FMLGMFUGCCsGAQUFBwEBBEkwRzAhBggrBgEFBQcwAYYVaHR0cDovL3IzLm8ubGVu
+Y3Iub3JnMCIGCCsGAQUFBzAChhZodHRwOi8vcjMuaS5sZW5jci5vcmcvMB0GA1Ud
+EQQWMBSCEnVzcGFuZWwuZnVuNC5jbG91ZDBMBgNVHSAERTBDMAgGBmeBDAECATA3
+BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIBFhpodHRwOi8vY3BzLmxldHNlbmNy
+eXB0Lm9yZzCCAQMGCisGAQQB1nkCBAIEgfQEgfEA7wB2ALc++yTfnE26dfI5xbpY
+9Gxd/ELPep81xJ4dCYEl7bSZAAABiDdRnMMAAAQDAEcwRQIgdgegevU+kcv0PCd5
+EINf9++O/ac4/Ynbmy01ASwg+0ICIQD9mhza9TfviEKCHKnUMHgaS9tjcejrF6h8
+VG7AmmCztQB1AHoyjFTYty22IOo44FIe6YQWcDIThU070ivBOlejUutSAAABiDdR
+nNsAAAQDAEYwRAIgOqoo2ulMlxm979n3pCLN97/3GvP+KNBq5s3dL6keGr4CIDOY
+8xT1Ceew21IBEhklAsVamGxp1K3J2cozlng7OpR4MA0GCSqGSIb3DQEBCwUAA4IB
+AQCoGEyUjb0YMDxwFRBAUwDuTN8wx/IFCHrKBT9wqq+Fd++VruvB8EW53ocunP71
+m6sbTzKPRfIteV6NuJl6FZutQCwOT2gLy2GLWaD2YA8E22w0Lvie1rt/FhTTIQIw
+NochV6OeOL6oCrFvXwsKDLU9grOVgBJChSQwzbkRn24hTDUUQkPzkZLvZ+ykrs/y
+T54NHn0pFkSx5oe1nfqazV2Ti8SmgkS1MXAA90W3wG8/8eG3RR6kBzzNzRp7fQhY
+XK7vJ8nY8pfif5E8EaKuajouTj5kOcF3AcyUHXTgtbpkFAPHpm7fnrC81aYKGW4r
+/oUWVWatiloVnYBO+NrIbOgA
+-----END CERTIFICATE-----
+[Sat 20 May 2023 05:01:16 AM BST] Your cert is in: /root/.acme.sh/uspanel.fun4.cloud_ecc/uspanel.fun4.cloud.cer
+[Sat 20 May 2023 05:01:16 AM BST] Your cert key is in: /root/.acme.sh/uspanel.fun4.cloud_ecc/uspanel.fun4.cloud.key
+[Sat 20 May 2023 05:01:16 AM BST] The intermediate CA cert is in: /root/.acme.sh/uspanel.fun4.cloud_ecc/ca.cer
+[Sat 20 May 2023 05:01:16 AM BST] And the full chain certs is there: /root/.acme.sh/uspanel.fun4.cloud_ecc/fullchain.cer
+[ERR] issue certs succeed,installing certs... 
+[Sat 20 May 2023 05:01:16 AM BST] The domain 'uspanel.fun4.cloud' seems to have a ECC cert already, lets use ecc cert.
+[Sat 20 May 2023 05:01:16 AM BST] Installing key to: /root/cert/uspanel.fun4.cloud/privkey.pem
+[Sat 20 May 2023 05:01:16 AM BST] Installing full chain to: /root/cert/uspanel.fun4.cloud/fullchain.pem
+[INF] install certs succeed,enable auto renew... 
+[Sat 20 May 2023 05:01:17 AM BST] Already uptodate!
+[Sat 20 May 2023 05:01:17 AM BST] Upgrade success!
+[INF] auto renew succeed, certs details: 
+total 20K
+drwxr-xr-x 2 root root 4.0K May 20 05:01 .
+drwxr-xr-x 3 root root 4.0K May 20 05:01 ..
+-rw-r--r-- 1 root root 5.3K May 20 05:01 fullchain.pem
+-rw------- 1 root root  227 May 20 05:01 privkey.pem

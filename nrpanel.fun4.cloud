@@ -1,0 +1,86 @@
+nrpanel.fun4.cloud
+
+[INF] current panel settings as follows:
+external IP is 23.132.185.252
+username: vihan
+userpasswd: Vhan1n4z!
+port: 8684
+
+apt-get install certbot -y
+certbot certonly --standalone --agree-tos --register-unsafely-without-email -d nrpanel.fun4.cloud
+certbot renew --dry-run
+
+IMPORTANT NOTES:
+ - Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/nrpanel.fun4.cloud/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/nrpanel.fun4.cloud/privkey.pem
+   Your cert will expire on 2023-07-21. To obtain a new or tweaked
+   version of this certificate in the future, simply run certbot
+   again. To non-interactively renew *all* of your certificates, run
+   "certbot renew"
+   
+   
+   
+   Hiddify: Command admin
+==========================================
+Not Secure:
+   http://23.132.185.252/C6RubiTn4V34SA2P3MK6KukzF/0652152b-9a42-42f4-834f-a192ffd43f33/admin/
+Secure:
+   https://23.132.185.252.sslip.io/C6RubiTn4V34SA2P3MK6KukzF/0652152b-9a42-42f4-834f-a192ffd43f33/admin/
+   
+   
+   
+   [Sat 20 May 2023 07:56:40 AM CEST] Cert success.
+-----BEGIN CERTIFICATE-----
+MIIEXjCCA0agAwIBAgISBGjjJKjkTEtevqIAHQhQJ1X4MA0GCSqGSIb3DQEBCwUA
+MDIxCzAJBgNVBAYTAlVTMRYwFAYDVQQKEw1MZXQncyBFbmNyeXB0MQswCQYDVQQD
+EwJSMzAeFw0yMzA1MjAwNDU2MzhaFw0yMzA4MTgwNDU2MzdaMB0xGzAZBgNVBAMT
+Em5ycGFuZWwuZnVuNC5jbG91ZDBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABP8x
+jrUlVGd0jSaZCyoNn60aqYfgmmbSDScPkigN7Wh9k7UNXjxSj5kIL61M67bbXbmi
+OjqsB7Slh+P3QnkaYgSjggJMMIICSDAOBgNVHQ8BAf8EBAMCB4AwHQYDVR0lBBYw
+FAYIKwYBBQUHAwEGCCsGAQUFBwMCMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFAh1
+Osb6tAx4mFGsv0mJuGagoN7KMB8GA1UdIwQYMBaAFBQusxe3WFbLrlAJQOYfr52L
+FMLGMFUGCCsGAQUFBwEBBEkwRzAhBggrBgEFBQcwAYYVaHR0cDovL3IzLm8ubGVu
+Y3Iub3JnMCIGCCsGAQUFBzAChhZodHRwOi8vcjMuaS5sZW5jci5vcmcvMB0GA1Ud
+EQQWMBSCEm5ycGFuZWwuZnVuNC5jbG91ZDBMBgNVHSAERTBDMAgGBmeBDAECATA3
+BgsrBgEEAYLfEwEBATAoMCYGCCsGAQUFBwIBFhpodHRwOi8vY3BzLmxldHNlbmNy
+eXB0Lm9yZzCCAQMGCisGAQQB1nkCBAIEgfQEgfEA7wB2AHoyjFTYty22IOo44FIe
+6YQWcDIThU070ivBOlejUutSAAABiDe7QdUAAAQDAEcwRQIhAKs81/sZzBAVuvoM
+nMISNUIp7Gf7gMj2XJFubdm7xBqpAiAOlGXR62XMDaINmWTd+Y8/XXXO0m9WzWWp
+/l4EEN8wCQB1AOg+0No+9QY1MudXKLyJa8kD08vREWvs62nhd31tBr1uAAABiDe7
+Qb8AAAQDAEYwRAIgYU6pYpQHNsKB0zrmQsA1xVbYUGfi6iK7MfVPydiks0ICIF5q
+hM8bAdzLKl78zxNI8xGqXtBUjun5Z8mEt+inG+V3MA0GCSqGSIb3DQEBCwUAA4IB
+AQA5np7sx5eP+5Xsc8NAuZwOwDNCD8QgrtO36kLi6FMVWeOi6MXUxuTeUnLLhCAW
+6XiwmdzJ6bNbt/GTz/4RvT7Sn/grvzvh7X7KO4WOIzlzZhJ9CHfSTcE/9lQ0zG51
+q/tz9vDUpxx07uhBATLk3SAxsKjw9ws5fACRNePHtQK5GBC7uVd+dqrlDh3aPOwe
+u3nNb1RYzTsOdPV4PbbBmaISZyb5z7sFlQ+UBJgwImEqnaIeebSyqY7V4pVX2hVQ
+IcKwvYwI6HyscsNCLNPlqDGC0rFoPHvQEuZLruj0Z0kaNbqqJCJ2efYxwGabpj+v
+A/HigbDTgSUXGcLt4DwYar4o
+-----END CERTIFICATE-----
+[Sat 20 May 2023 07:56:40 AM CEST] Your cert is in: /root/.acme.sh/nrpanel.fun4.cloud_ecc/nrpanel.fun4.cloud.cer
+[Sat 20 May 2023 07:56:40 AM CEST] Your cert key is in: /root/.acme.sh/nrpanel.fun4.cloud_ecc/nrpanel.fun4.cloud.key
+[Sat 20 May 2023 07:56:40 AM CEST] The intermediate CA cert is in: /root/.acme.sh/nrpanel.fun4.cloud_ecc/ca.cer
+[Sat 20 May 2023 07:56:40 AM CEST] And the full chain certs is there: /root/.acme.sh/nrpanel.fun4.cloud_ecc/fullchain.cer
+[ERR] issue certs succeed,installing certs... 
+[Sat 20 May 2023 07:56:41 AM CEST] The domain 'nrpanel.fun4.cloud' seems to have a ECC cert already, lets use ecc cert.[Sat 20 May 2023 07:56:41 AM CEST] Installing key to: /root/cert/nrpanel.fun4.cloud/privkey.pem
+[Sat 20 May 2023 07:56:41 AM CEST] Installing full chain to: /root/cert/nrpanel.fun4.cloud/fullchain.pem
+[INF] install certs succeed,enable auto renew... 
+[Sat 20 May 2023 07:56:42 AM CEST] Already uptodate!
+[Sat 20 May 2023 07:56:43 AM CEST] Upgrade success!
+[INF] auto renew succeed, certs details: 
+total 20K
+drwxr-xr-x 2 root root 4.0K May 20 07:56 .
+drwxr-xr-x 3 root root 4.0K May 20 07:56 ..
+-rw-r--r-- 1 root root 5.3K May 20 07:56 fullchain.pem
+-rw------- 1 root root  227 May 20 07:56 privkey.pem
+
+
+
+
+
+
+Please wait about 5 minutes to make sure everything is updated. during this time, please copy and save your Proxy links which are:
+Admin Links
+Not Secure: http://23.132.185.252/87esdsxaIqyKg86J0aFUl7urGrFGw/8b4b5d9b-31ae-4095-b993-1037e7e10812/admin/
+https://norway.fun4.cloud/87esdsxaIqyKg86J0aFUl7urGrFGw/8b4b5d9b-31ae-4095-b993-1037e7e10812/admin/
