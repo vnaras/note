@@ -89,18 +89,22 @@ Fake-TLS base64: https://t.me/proxy?server=23.132.185.252&port=1586&secret=7hDm9
 
 INFO: Proxy is ready
 
+
+
+curl -L -o mtp_install.sh https://git.io/fj5ru && bash mtp_install.sh -p 1586 -s 313c4bd742c758561d5961343265c6e1 -t 290f4242cbb3a5b543379cc00d2406f8 -a dd -a tls -d telewebion.com
+
 NE
+systemctl daemon-reload
 INFO: Starting
-Created symlink /etc/systemd/system/multi-user.target.wants/mtproto-proxy.service → /etc/systemd/system/mtproto-proxy.service.
 INFO: Detecting IP address
 INFO: Detected external IP is 45.87.43.74
 INFO: Logs: /var/log/mtproto-proxy/application.log
-INFO: Secret: 10e6f41faa517352cce9428fb7dbb4ab
+INFO: Secret: 313c4bd742c758561d5961343265c6e1
 INFO: Proxy links:
-Normal:          https://t.me/proxy?server=45.87.43.74&port=1586&secret=10e6f41faa517352cce9428fb7dbb4ab
-Secure:          https://t.me/proxy?server=45.87.43.74&port=1586&secret=dd10e6f41faa517352cce9428fb7dbb4ab
-Fake-TLS hex:    https://t.me/proxy?server=45.87.43.74&port=1586&secret=ee10e6f41faa517352cce9428fb7dbb4ab74656c65776562696f6e2e636f6d
-Fake-TLS base64: https://t.me/proxy?server=45.87.43.74&port=1586&secret=7hDm9B-qUXNSzOlCj7fbtKt0ZWxld2ViaW9uLmNvbQ==
+Normal:          https://t.me/proxy?server=45.87.43.74&port=1586&secret=313c4bd742c758561d5961343265c6e1
+Secure:          https://t.me/proxy?server=45.87.43.74&port=1586&secret=dd313c4bd742c758561d5961343265c6e1
+Fake-TLS hex:    https://t.me/proxy?server=45.87.43.74&port=1586&secret=ee313c4bd742c758561d5961343265c6e174656c65776562696f6e2e636f6d
+Fake-TLS base64: https://t.me/proxy?server=45.87.43.74&port=1586&secret=7jE8S9dCx1hWHVlhNDJlxuF0ZWxld2ViaW9uLmNvbQ==
 
 INFO: Proxy is ready
 
